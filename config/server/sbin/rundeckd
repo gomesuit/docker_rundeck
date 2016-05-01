@@ -17,7 +17,7 @@
 # Get the Launcher Jar path
 [ -z "$RDECK_LAUNCHER" ] && {
     # Defaults to location of first startup
-    RDECK_LAUNCHER='/root/rund/rundeck-launcher-2.6.7.jar'; #set by install
+    RDECK_LAUNCHER='/rundeck/rundeck-launcher-2.6.7.jar'; #set by install
 }
 [ -r "$RDECK_LAUNCHER" ] || {
     echo "RDECK_LAUNCHER not found: $RDECK_LAUNCHER" 
