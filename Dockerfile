@@ -8,7 +8,9 @@ ADD http://dl.bintray.com/rundeck/rundeck-maven/rundeck-launcher-2.6.7.jar /rund
 
 WORKDIR /rundeck
 
+ENV RDECK_BASE /rundeck
+
 EXPOSE 4440
 
-CMD java -jar -Duser.timezone=Asia/Tokyo rundeck-launcher-2.6.7.jar
+CMD server/sbin/rundeckd start && tail -f server/logs/rundeck.access.log
 
